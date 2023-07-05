@@ -1,0 +1,26 @@
+- Nikto v2.5.0
+---------------------------------------------------------------------------
++ Target IP:          172.16.91.134
++ Target Hostname:    172.16.91.134
++ Target Port:        80
++ Start Time:         2023-07-05 06:19:50 (GMT-4)
+---------------------------------------------------------------------------
++ Server: nginx/1.4.6 (Ubuntu)
++ /: Cookie I_am_admin created without the httponly flag. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
++ /: Retrieved x-powered-by header: PHP/5.5.9-1ubuntu4.29.
++ /: The anti-clickjacking X-Frame-Options header is not present. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
++ /: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type. See: https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ /whatever/: Directory indexing found.
++ /robots.txt: Entry '/whatever/' is returned a non-forbidden or redirect HTTP code (200). See: https://portswigger.net/kb/issues/00600600_robots-txt-file
++ /robots.txt: contains 2 entries which should be manually viewed. See: https://developer.mozilla.org/en-US/docs/Glossary/Robots.txt
++ nginx/1.4.6 appears to be outdated (current is at least 1.20.1).
++ /admin/: This might be interesting.
++ /css/: This might be interesting.
++ /includes/: This might be interesting.
++ /admin/index.php: This might be interesting: has been seen in web logs from an unknown scanner.
++ /#wp-config.php#: #wp-config.php# file found. This file contains the credentials.
++ 8118 requests: 7 error(s) and 13 item(s) reported on remote host
++ End Time:           2023-07-05 06:20:57 (GMT-4) (67 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested

@@ -1,0 +1,64 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: dirb_log.txt
+START_TIME: Wed Jul  5 08:29:59 2023
+URL_BASE: http://172.16.91.134/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://172.16.91.134/ ----
+==> DIRECTORY: http://172.16.91.134/admin/
+==> DIRECTORY: http://172.16.91.134/audio/
+==> DIRECTORY: http://172.16.91.134/css/
+==> DIRECTORY: http://172.16.91.134/errors/
++ http://172.16.91.134/favicon.ico (CODE:200|SIZE:1406)
+==> DIRECTORY: http://172.16.91.134/fonts/
+==> DIRECTORY: http://172.16.91.134/images/
+==> DIRECTORY: http://172.16.91.134/includes/
++ http://172.16.91.134/index.php (CODE:200|SIZE:6892)
+==> DIRECTORY: http://172.16.91.134/js/
++ http://172.16.91.134/robots.txt (CODE:200|SIZE:53)
+==> DIRECTORY: http://172.16.91.134/whatever/
+
+---- Entering directory: http://172.16.91.134/admin/ ----
+==> DIRECTORY: http://172.16.91.134/admin/css/
+==> DIRECTORY: http://172.16.91.134/admin/fonts/
++ http://172.16.91.134/admin/index.php (CODE:200|SIZE:1432)
+
+---- Entering directory: http://172.16.91.134/audio/ ----
+
+---- Entering directory: http://172.16.91.134/css/ ----
+==> DIRECTORY: http://172.16.91.134/css/images/
+
+---- Entering directory: http://172.16.91.134/errors/ ----
+
+---- Entering directory: http://172.16.91.134/fonts/ ----
+
+---- Entering directory: http://172.16.91.134/images/ ----
+
+---- Entering directory: http://172.16.91.134/includes/ ----
+
+---- Entering directory: http://172.16.91.134/js/ ----
+
+---- Entering directory: http://172.16.91.134/whatever/ ----
++ http://172.16.91.134/whatever/htpasswd (CODE:200|SIZE:38)
+
+---- Entering directory: http://172.16.91.134/admin/css/ ----
+==> DIRECTORY: http://172.16.91.134/admin/css/images/
+
+---- Entering directory: http://172.16.91.134/admin/fonts/ ----
+
+---- Entering directory: http://172.16.91.134/css/images/ ----
+
+---- Entering directory: http://172.16.91.134/admin/css/images/ ----
+
+-----------------
+END_TIME: Wed Jul  5 08:30:40 2023
+DOWNLOADED: 64568 - FOUND: 5
