@@ -2,6 +2,7 @@
 from html.parser import HTMLParser
 import os
 import shutil
+import sys
 import requests
 from bs4 import BeautifulSoup
 import threading
@@ -40,14 +41,17 @@ def downloaderEngine(url: str, currPath: str, dirList: list[str]):
         subThread.join()
 
 def main():
-    url = "http://172.16.91.134/";
+    if len(sys.argv) != 2:
+        print("Usage hiddenDownloader [url]")
+        return
+    print("Warning : It takes around 4 minutes to execute :)")
+    url = sys.argv[1]
+    if url[-1] != "/":
+        url += "/"
     rootIndex = requests.get(url + '.hidden/', allow_redirects=True);
     if not os.path.exists(".hidden"):
         os.mkdir(".hidden");
     rootElemList = fromIndexToList(rootIndex)
     downloaderEngine(url, ".hidden/", rootElemList)
-    os.rename(".hidden", "hidden")
 
-if os.path.exists("hidden"):
-    shutil.rmtree("hidden")
 main()

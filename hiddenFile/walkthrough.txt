@@ -1,0 +1,8 @@
+1. By looking to the robots.txt file, we found the .hidden/ path in it.
+2. With a first request we found an index html page that link to many many subdirectories
+3. As this route is name hidden, it must have a hidden file with something interesting in there
+4. So we made a script to download all the sub directories. You'll find it in the ressources dir.
+5. Finally, we made a tiny script to display all the content from those file and filter the useless content to find this :
+whtccjokayshttvxycsvykxcfm/igeemtxnvexvxezqwntmzjltkt/lmpanswobhwcozdqixbowvbrhw/README:1:Hey, here is your flag : d5eec3ec36cf80dce44a896f961c1831a05526ec215693c8f2c39543497d4466
+
+PS: The script is a bit long to execute, so take your time :)
