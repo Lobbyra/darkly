@@ -10,7 +10,7 @@ Here is the table of all the 14 flags i found and if some are missing :
 [x] list images table sql injection flag
 [x] db_default table sql injection flag
 [x] Whatever htdpassword hidden path
-[] ???
+[x] i_am_admin cookie
 [] ???
 [] ???
 [] ???
