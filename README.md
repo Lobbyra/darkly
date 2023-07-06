@@ -11,7 +11,7 @@ Here is the table of all the 14 flags i found and if some are missing :
 [x] db_default table sql injection flag
 [x] Whatever htdpassword hidden path
 [x] i_am_admin cookie
-[] ???
+[x] Recover page 
 [] ???
 [] ???
 [] ???
