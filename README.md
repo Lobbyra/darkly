@@ -16,5 +16,5 @@ Here is the table of all the 14 flags i found and if some are missing :
 [x] Albatraoz
 [x] The media nsa page
 [x] Cursed feedback XSS
-[] ???
+[] Magic redirection
 [] ???

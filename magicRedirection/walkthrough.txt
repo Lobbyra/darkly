@@ -1,0 +1,8 @@
+In the homepage there is social media link that aren't directly liked to the official website.
+
+When you click on it, you actually click on this link :
+
+/index.php?page=redirect&site=facebook
+
+If you try to change the "site", you'll get a page with a flag :
+b9e775a0291fed784a2d9680fcfad7edd6b8cdf87648da647aaf4bba288bcab3
