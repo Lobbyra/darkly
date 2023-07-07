@@ -4,7 +4,6 @@ This is my repo that contains the flags and explainations of the Darkly machine 
 
 Here is the table of all the 14 flags i found and if some are missing :
 
-[x] Albatraoz
 [x] Hidden file
 [x] users table SQL injection flag
 [x] list images table sql injection flag
@@ -14,7 +13,8 @@ Here is the table of all the 14 flags i found and if some are missing :
 [x] Recover page 
 [x] What the vote ?
 [x] I want THAT page
-[] ???
+[x] Albatraoz
+[x] The media nsa page
 [] ???
 [] ???
 [] ???
