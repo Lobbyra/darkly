@@ -1,0 +1,20 @@
+There is a page used to upload images at : /index.php?page=upload
+
+There is a button to select a file and another to send it.
+
+If the file is a jpg image, the site tell you /tmp/[your file] succesfully uploaded.
+
+If the image you uploaded through the UI is not an image, the website tells you : Your image was not uploaded.
+
+The front send the file with the multipart/form-data content-type.
+
+With this type of sending, the file MIME type is send by the client and the server look at this to know if it's a jpg or another file.
+
+With the help of curl, with can manually set this type and send anything we want.
+So with this command you can send any file you want by specifing the parsed MIME type:
+
+curl -F "Upload=send" \
+-F "uploaded=@ressources/malicious.sh;type=image/jpeg" \
+http://172.16.91.134/index.php\?page=upload
+
+The response contains the flag
