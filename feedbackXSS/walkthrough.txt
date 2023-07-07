@@ -1,0 +1,29 @@
+Ok this one is really weird.
+
+In the homepage, there is a button "leave a feedback" that redirect to a page with a form.
+
+In this form, there are 2 fields "name" & "message" that needs to be non-empty to make the form valid.
+
+With the Help of the wapiti tools that checks various type of vulnerabilities in websites, i found an XSS in the name field.
+
+So here is the exploit request :
+
+curl "http://172.16.91.134/?page=feedback" \
+-e "http://172.16.91.134/?page=feedback" \
+-d "txtName=%3CScRiPt%3Ealert%28%27blurp%27%29%3C%2FsCrIpT%3E&btnSign=Sign+Guestbook&mtxtMessage=Hi+there%21"
+
+Here is the URL decoded txtName value : <ScRiPt>alert('blurp')</sCrIpT>
+
+As you can see here, "script" key-words are not lowercased and this is important to make the request be an XSS.
+Unless, the feedback is just not saved in the DB.
+
+So the XSS work but no flags appear...
+
+For this flag, you just need the souls of the randomness and just create a feedback with a random name and "alert" in message.
+With this very specific technique, the flag will appear and you are a successfull H4ck3r !
+
+If you feel like a different personm you can also type "script" in the name field and let you inspiration type a random message and YES, the flag will appear again.
+
+This is a very weird flag...
+
+By the way the flag is 0fbb54bbf7d099713ca4be297e1bc7da0173d8b3c21c1811b916a3a86652724e

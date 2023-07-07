@@ -15,6 +15,6 @@ Here is the table of all the 14 flags i found and if some are missing :
 [x] I want THAT page
 [x] Albatraoz
 [x] The media nsa page
-[] ???
+[x] Cursed feedback XSS
 [] ???
 [] ???
