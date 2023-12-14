@@ -10,7 +10,7 @@ This HTML element is an "object" like this :
 
 If the url parameter isn't "nsa", the content of the parameter directly goes in the data property of the object.
 
-From this source, we'll learn that we can forge an URL to add an XSS :
+From this source, we'll learn that we can forge an URL to add an XSS from the html beacon <object>:
 https://owasp.org/www-community/attacks/xss/
 
 We first try this url to demonstrate that we can inject any data from the URL :
